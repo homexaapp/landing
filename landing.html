@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HomeXa App</title>
+        <link rel="stylesheet" href="landing.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('#download_links a').forEach((link) => {
+                    if (['', '#'].includes(link.getAttribute('href'))) {
+                        console.warn(`"${link.textContent}" link needs an href.`);
+                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <h1 id="app_name">HomeXa</h1>
+        <div id="tagline">Know the Home. Know the Value.</div>
+        <div id="description">Scan and identify HVACs, furnaces, and water heaters instantly. Smarter insights for smarter agents.</div>
+        <div id="download_links">
+            <a href="#">Download for iOS</a>
+            <a href="#">Download for Android</a>
+        </div>
+    </body>
+</html>

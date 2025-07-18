@@ -1,0 +1,56 @@
+body {
+    display: grid;
+    justify-items: center;
+    row-gap: .5rem;
+
+    > * {
+        max-inline-size: 60ch;
+    }
+}
+
+#app_name {
+    font-size: 2.5rem;
+    margin-block-end: 0;
+}
+
+#tagline {
+    font-size: 1.5rem;
+}
+
+#description {
+    font-size: 1.125rem;
+    margin-block: 1rem;
+}
+
+#download_links {
+    display: flex;
+    column-gap: 2rem;
+    margin-block: 3rem;
+
+    > a {
+        --button-color: #111;
+        --button-border-color: #808080;
+        --button-background-color: #f0f0f0;
+        padding: .5rem;
+        border: solid 1px var(--button-border-color);
+        border-radius: .25rem;
+        color: var(--button-color);
+        background-color: var(--button-background-color);
+
+        &:any-link {
+            text-decoration: none;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                --button-background-color-hover: #e5e5e5;
+                background-color: var(--button-background-color-hover);
+            }
+        }
+
+        &:active {
+            --button-background-color-active: #d8d8d8;
+            background-color: var(--button-background-color-active);
+        }
+    }
+}
