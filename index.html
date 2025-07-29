@@ -7,21 +7,39 @@
         <link rel="stylesheet" href="landing.css">
         <script>
             document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('#download_links a').forEach((link) => {
-                    if (['', '#'].includes(link.getAttribute('href'))) {
-                        console.warn(`"${link.textContent}" link needs an href.`);
-                    }
-                });
-            })
+                const main = document.querySelector('main');
+                (new ResizeObserver(function set_is_wrapped_property() {
+                    const [content, screenshot] = Array.from(main.children);
+                    main.style.setProperty('--is-wrapped', screenshot.offsetTop > (content.offsetTop + content.offsetHeight));
+                })).observe(main);
+            });
         </script>
     </head>
     <body>
-        <h1 id="app_name">HomeXa</h1>
-        <div id="tagline">Know the Home. Know the Value.</div>
-        <div id="description">Scan and identify HVACs, furnaces, and water heaters instantly. Smarter insights for smarter agents.</div>
-        <div id="download_links">
-            <a href="#">Download for iOS</a>
-            <a href="#">Download for Android</a>
-        </div>
+        <header>
+            <a href="/" id="logo">
+                <img src="logo_mark_symbol.svg" alt="HomeXa icon" id="icon">
+                <img src="logo_wordmark.svg" alt="HomeXa wordmark" id="wordmark">
+            </a>
+        </header>
+        <main>
+            <div>
+                <h1 id="app_name">HomeXa</h1>
+                <div id="tagline">Know the Home. Know the Value.</div>
+                <div id="description">Scan and identify HVACs, furnaces, and water heaters instantly. Smarter insights for smarter agents.</div>
+                <div id="download_links">
+                    <a href="#" target="_blank">
+                        <img src="app_store_badge.svg" alt="Download on the App Store">
+                    </a>
+                    <a href="#" target="_blank" >
+                        <img src="google_play_badge.png" alt="Get it on Google Play">
+                    </a>
+                </div>
+            </div>
+            <div id="screenshot">
+                <img src="homexa_screenshot.png" alt="HomeXa screenshot on iPhone">
+            </div>
+        </main>
+        <footer>© 2025 Eponymous Heritage LLC</footer>
     </body>
 </html>
