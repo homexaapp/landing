@@ -1,0 +1,38 @@
+main {
+    margin-inline: auto;
+    padding-inline: .5rem;
+    inline-size: fit-content;
+}
+
+#plans {
+    list-style: none;
+    padding-inline-start: 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    > li {
+        flex-basis: 17ch;
+        flex-grow: 1;
+        flex-shrink: 0;
+        padding: 2rem;
+        border: solid 1px #ccc;
+        border-radius: .25rem;
+        background-color: #fff;
+
+        .name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-block-start: 0;
+            margin-block-end: .5rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style: disc;
+        }
+    }
+}
