@@ -1,0 +1,54 @@
+@import "../colors.css";
+@import "embed.css";
+@import "../typography.css";
+
+body {
+    --icon-height: 4.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    > div:empty {
+        /* Override for added "clearfix" div from iframeResizer which affects flexbox justify-content */
+        display: none !important;
+    }
+}
+
+nav {
+    margin-inline: .75rem;
+    max-inline-size: 100%;
+    overflow-x: scroll;
+    display: grid;
+    align-items: center;
+
+    > ul {
+        list-style: none;
+        padding-inline-start: 0;
+        gap: 1.5rem;
+        display: flex;
+    }
+
+    a:any-link {
+        font-size: 1.1rem;
+        color: var(--brand-color-blue);
+        text-decoration: none;
+    }
+}
+
+#logo {
+    text-decoration: none;
+    white-space: nowrap;
+    > img {
+        vertical-align: middle;
+    }
+}
+
+#icon {
+    block-size: var(--icon-height);
+}
+
+#wordmark {
+    block-size: calc(var(--icon-height) * .9);
+    margin-inline-start: -2.5rem;
+}

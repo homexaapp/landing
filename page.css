@@ -1,0 +1,18 @@
+@import "colors.css";
+@import "typography.css";
+
+body {
+    --body-max-inline-size: 80ch;
+    max-inline-size: var(--body-max-inline-size);
+    margin-inline: auto;
+    background: #f3f3f3;
+}
+
+main {
+    margin-block: 5rem;
+}
+
+iframe {
+    width: 100%;
+    border: 0;
+}

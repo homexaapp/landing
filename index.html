@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>HomeXa App</title>
         <link rel="stylesheet" href="landing.css">
+        <script src="iframe_resizer_parent.js"></script>
+        <script defer src="init_iframe_resize.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const main = document.querySelector('main');
@@ -17,11 +19,7 @@
     </head>
     <body>
         <header>
-            <a href="/" id="logo">
-                <img src="logo_mark_symbol.svg" alt="HomeXa icon" id="icon">
-                <img src="logo_wordmark.svg" alt="HomeXa wordmark" id="wordmark">
-            </a>
-        </header>
+            <iframe src="common_layout/site_header.html" id="site_header"></iframe></header>
         <main>
             <div>
                 <h1 id="app_name">HomeXa</h1>
@@ -29,17 +27,19 @@
                 <div id="description">Scan and identify HVACs, furnaces, and water heaters instantly. Smarter insights for smarter agents.</div>
                 <div id="download_links">
                     <a href="#" target="_blank">
-                        <img src="app_store_badge.svg" alt="Download on the App Store">
+                        <img src="landing_page_assets/app_store_badge.svg" alt="Download on the App Store">
                     </a>
                     <a href="#" target="_blank" >
-                        <img src="google_play_badge.png" alt="Get it on Google Play">
+                        <img src="landing_page_assets/google_play_badge.png" alt="Get it on Google Play">
                     </a>
                 </div>
             </div>
             <div id="screenshot">
-                <img src="homexa_screenshot.png" alt="HomeXa screenshot on iPhone">
+                <img src="landing_page_assets/homexa_screenshot.png" alt="HomeXa screenshot on iPhone">
             </div>
         </main>
-        <footer>© 2025 Eponymous Heritage LLC</footer>
+        <footer>
+            <iframe src="common_layout/site_footer.html"></iframe>
+        </footer>
     </body>
 </html>
