@@ -1,19 +1,18 @@
 main {
     margin-inline: auto;
-    inline-size: fit-content;
+    --plans-column-min-inline-size: 20ch;
+    --plans-gap: 1rem;
+    max-inline-size: max(calc(2 * var(--plans-column-min-inline-size) + var(--plans-gap)), 60ch);
 }
 
 #plans {
     list-style: none;
     padding-inline-start: 0;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--plans-column-min-inline-size), 1fr));
+    gap: var(--plans-gap);
 
     > li {
-        flex-basis: 17ch;
-        flex-grow: 1;
-        flex-shrink: 0;
         padding: 2rem;
         border: solid 1px #ccc;
         border-radius: .25rem;
@@ -32,6 +31,7 @@ main {
 
         ul {
             list-style: disc;
+            padding-inline-start: 1rem;
         }
     }
 }
