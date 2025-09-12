@@ -93,11 +93,39 @@ main {
     }
 }
 
-#screenshot {
+#screenshots {
     text-align: center;
+    --image-inline-size: 22ch;
+    inline-size: calc(var(--image-inline-size) + 4ch);
 
-    > img {
-        clip-path: inset(0 round 16px);
-        inline-size: 22ch;
+    > ul {
+        inline-size: 100%;
+        padding-inline-start: 0;
+        padding-block-end: 1rem;
+        list-style: none;
+        display: grid;
+
+        --scroll-snap-align: start;
+
+        --grid-inline-size: calc(var(--image-inline-size) + 2ch);
+        grid-template-columns: repeat(6, var(--grid-inline-size));
+
+        @container style(--is-wrapped: true) {
+            --scroll-snap-align: center;
+            --grid-inline-size: max(28ch, 33%);
+        }
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        mask-image: linear-gradient(to right, transparent, black 5%, #232323 95%, transparent);
+
+        > li {
+            scroll-snap-align: var(--scroll-snap-align);
+
+            img {
+                clip-path: inset(0 round 16px);
+                inline-size: var(--image-inline-size);
+            }
+        }
     }
 }
