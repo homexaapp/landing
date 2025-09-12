@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="page.css">
+    <script src="iframe_resizer_parent.js"></script>
+    <script defer src="init_iframe_resize.js"></script>
+    <style>
+        main {
+            inline-size: fit-content;
+            margin-inline: auto;
+        }
+
+        #pricing {
+            --border-color: #e3e0db;
+            padding: 2rem 1rem;
+            border: solid 1px var(--border-color);
+            border-block-start-color: #c5beb4;
+            border-block-start-width: 3px;
+
+            border-radius: .25rem;
+            background-color: #fff;
+            box-shadow: 0 1px 3px #dadada;
+
+            > :not(h2) {
+                padding-inline: 2rem;
+            }
+
+            > h2 {
+                padding-block-start: 1rem;
+                border-block-start: solid 1px var(--border-color);
+            }
+        }
+
+        #price {
+            --muted-color: #808080;
+            inline-size: fit-content;
+            text-align: center;
+            > :not([id]) {
+                text-align: center;
+                color: var(--muted-color)
+            }
+        }
+
+        #monthly {
+            > span {
+                &:first-of-type {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                }
+
+                &:nth-of-type(n + 2) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        #yearly {
+            font-size: .9rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <iframe src="common_layout/site_header.html"></iframe>
+</header>
+<main>
+    <h1>Pricing</h1>
+    <div id="pricing">
+        <div id="price">
+            <div id="monthly"><span>$9</span><span>/</span><span>month</span>
+            </div>
+            <div>or</div>
+            <div id="yearly">
+                <span>$99</span><span>/</span><span>year</span>
+                <span>(save 8%)</span>
+            </div>
+        </div>
+        <h2>Features</h2>
+        <ul id="features">
+            <li>Unlimited scans</li>
+            <li>Report sharing</li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <iframe src="common_layout/site_footer.html"></iframe>
+</footer>
+</body>
+</html>
