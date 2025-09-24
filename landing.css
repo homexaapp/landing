@@ -107,8 +107,9 @@ main {
 
         --scroll-snap-align: start;
 
+        --item-count: 7;
         --grid-inline-size: calc(var(--image-inline-size) + 2ch);
-        grid-template-columns: repeat(6, var(--grid-inline-size));
+        grid-template-columns: repeat(var(--item-count), var(--grid-inline-size));
 
         @container style(--is-wrapped: true) {
             --scroll-snap-align: center;
@@ -122,9 +123,10 @@ main {
         > li {
             scroll-snap-align: var(--scroll-snap-align);
 
-            img {
-                clip-path: inset(0 round 16px);
+            img, iframe {
                 inline-size: var(--image-inline-size);
+                height: 100%;
+                clip-path: inset(0 round 16px);
             }
         }
     }
