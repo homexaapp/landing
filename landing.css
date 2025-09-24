@@ -57,18 +57,6 @@ main {
             text-decoration: none;
         }
 
-        @media (hover: hover) {
-            &:hover {
-                --button-background-color-hover: #e5e5e5;
-                background-color: var(--button-background-color-hover);
-            }
-        }
-
-        &:active {
-            --button-background-color-active: #d8d8d8;
-            background-color: var(--button-background-color-active);
-        }
-
         > img {
             display: block;
         }
