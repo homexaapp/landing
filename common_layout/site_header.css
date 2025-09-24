@@ -33,7 +33,7 @@ nav {
 
     a:any-link {
         font-size: 1.1rem;
-        color: var(--brand-color-blue);
+        color: var(--brand-color-black);
         text-decoration: none;
     }
 }
