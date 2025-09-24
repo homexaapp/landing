@@ -48,11 +48,8 @@ main {
     > a {
         display: inline-block;
         --button-color: #111;
-        --button-border-color: #808080;
-        --button-background-color: #f0f0f0;
         border-radius: .25rem;
         color: var(--button-color);
-        background-color: var(--button-background-color);
         padding: 0;
         border: 0;
 
