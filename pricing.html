@@ -8,16 +8,18 @@
     <script src="iframe_resizer_parent.js"></script>
     <script defer src="init_iframe_resize.js"></script>
     <style>
+        @import url("colors.css");
+
         main {
             inline-size: fit-content;
             margin-inline: auto;
         }
 
         #pricing {
-            --border-color: #e3e0db;
+            --border-color: #0000004f;
             padding: 2rem 1rem;
             border: solid 1px var(--border-color);
-            border-block-start-color: #c5beb4;
+            border-block-start-color: var(--brand-color-black);
             border-block-start-width: 3px;
 
             border-radius: .25rem;
