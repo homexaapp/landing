@@ -18,7 +18,9 @@ body {
 nav {
     margin-inline: .75rem;
     max-inline-size: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     display: grid;
     align-items: center;
 

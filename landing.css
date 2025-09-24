@@ -116,7 +116,9 @@ main {
             --grid-inline-size: max(28ch, 33%);
         }
 
-        overflow-x: scroll;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
         scroll-snap-type: x mandatory;
         mask-image: linear-gradient(to right, transparent, black 5%, #232323 95%, transparent);
 
