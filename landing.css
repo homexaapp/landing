@@ -80,7 +80,7 @@ main {
 
 #screenshots {
     text-align: center;
-    --image-inline-size: 22ch;
+    --image-inline-size: 222px;
     inline-size: calc(var(--image-inline-size) + 4ch);
 
     > ul {
