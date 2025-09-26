@@ -5,6 +5,7 @@ body {
     --body-max-inline-size: 80ch;
     max-inline-size: var(--body-max-inline-size);
     margin-inline: auto;
+    margin-block-end: 2rem;
     background-color: #f3f3f3;
     background-image: url("./landing_page_assets/background.jpg");
     background-size: cover;
@@ -20,4 +21,8 @@ main {
 iframe {
     width: 100%;
     border: 0;
+
+    header &, footer & {
+        display: block;
+    }
 }
