@@ -16,6 +16,7 @@
     <script src="iframe_resizer_parent.js"></script>
     <script defer src="init_iframe_resize.js"></script>
     <style>
+        @import "typography.css";
         @import url("colors.css");
 
         main {
@@ -70,6 +71,13 @@
         #yearly {
             font-size: .9rem;
         }
+
+        #tax_deductible_note {
+            margin-block-start: .25rem;
+            font-size: var(--small-text-size);
+            color: var(--brand-color-black);
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +102,7 @@
             <li>Report sharing</li>
         </ul>
     </div>
+    <div id="tax_deductible_note">Tax-deductible as a business expense</div>
 </main>
 <footer>
     <iframe src="common_layout/site_footer.html"></iframe>

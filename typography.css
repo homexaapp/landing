@@ -1,3 +1,5 @@
 body {
     font-family: system-ui;
+    --small-text-size: .9rem;
+    --deemphasized-text-color: #999;
 }
