@@ -117,3 +117,20 @@ main {
         }
     }
 }
+
+#webinar_registration_button {
+    display: block;
+    border: solid 2px #74490b;
+    background: #8f5c14;
+    color: #fff;
+    padding: .5rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px 2px;
+    border-radius: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    word-break: break-word;
+
+    @container style(--is-wrapped: true) {
+        margin-inline: auto;
+    }
+}
